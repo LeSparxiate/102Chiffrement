@@ -5,7 +5,7 @@
 ** Login   <giallo_n@epitech.net>
 ** 
 ** Started on  Thu Oct 10 23:48:30 2013 nathan giallombardo
-** Last update Wed Nov 27 13:55:20 2013 nathan giallombardo
+** Last update Wed Nov 27 14:19:23 2013 nathan giallombardo
 */
 
 #ifndef MY_H_
@@ -18,4 +18,5 @@ int	my_strlen(char*);
 void	my_notprintable(char*);
 int	my_printf(const char *, ...);
 int	my_str_islower(char *str);
+int	my_str_isnum(char *str);
 #endif /* !MY_H_ */
