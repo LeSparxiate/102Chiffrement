@@ -5,7 +5,7 @@
 ** Login   <giallo_n@epitech.net>
 ** 
 ** Started on  Wed Nov 27 16:37:05 2013 nathan giallombardo
-** Last update Wed Nov 27 16:40:48 2013 nathan giallombardo
+** Last update Wed Nov 27 17:01:04 2013 nathan giallombardo
 */
 #include "my.h"
 
@@ -21,7 +21,7 @@ int	my_str_isdoublon(char *str)
       j = 0;
       while (str[j])
 	{
-	  if (str[i] == str[j])
+	  if (str[i] == str[j] && i!=j)
 	    return (0);
 	  j++;
 	}
