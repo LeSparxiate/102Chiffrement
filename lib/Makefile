@@ -5,7 +5,7 @@
 ## Login   <giallo_n@epitech.net>
 ## 
 ## Started on  Sun Nov 17 14:49:31 2013 nathan giallombardo
-## Last update Sun Nov 17 18:07:38 2013 nathan giallombardo
+## Last update Wed Nov 27 13:55:52 2013 nathan giallombardo
 ##
 
 RM	= rm -f
@@ -26,7 +26,8 @@ SRCS	= func2.c \
 	  my_putnbr_base.c \
 	  my_put_nbr.c \
 	  my_putstr.c \
-	  my_strlen.c
+	  my_strlen.c \
+	  my_str_islower.c
 
 OBJS	= $(SRCS:.c=.o)
 
