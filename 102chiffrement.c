@@ -5,7 +5,7 @@
 ** Login   <despla_t@epitech.net>
 **
 ** Started on  Wed Nov 27 13:22:42 2013 Thibault Desplat
-** Last update Thu Nov 28 00:34:02 2013 Thibault Desplat
+** Last update Thu Nov 28 13:20:24 2013 nathan giallombardo
 */
 
 #include "my.h"
@@ -16,7 +16,7 @@ int	check_message(char *str, int flag)
   if (!flag)
     return (my_str_islower(str));
   else
-    return (my_str_upcase(str));
+    return (my_str_isupcase(str));
 }
 
 int	check_int(char **argv)
@@ -48,6 +48,7 @@ int	check_base(char *str)
 int	main(int argc, char **argv)
 {
   int	keys[4];
+  int	flags;
 
   if (argc != 8)
     {
@@ -55,14 +56,21 @@ int	main(int argc, char **argv)
 		argv[0]);
       return (1);
     }
-  if (check_message(argv[1]) == 0 || check_int(argv) == 0
-      || check_flag(argv[7]) == 0 || check_base(argv[6]) == 0)
+  if (!check_flag(argv[7])) 
+    {
+    my_printf("Erreur\n");
+    return (1);
+    }
+  flags = my_getnbr(argv[7]);
+  if (!check_message(argv[1], flags)
+      || !check_int(argv)
+      || !check_base(argv[6]))
     {
       my_printf("Erreur\n");
       return (1);
     }
-  my_get_keys(argv, keys, my_getnbr(argv[7]));
-  my_get_message(argv[1]);
+  my_get_keys(argv, keys, flags);
+  my_get_message(argv[1], flags);
   if (my_strlen(argv[1]) % 2 == 1)
     my_get_chiffrementI(keys, argv[1], argv[6]);
   else

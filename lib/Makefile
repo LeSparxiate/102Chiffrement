@@ -5,7 +5,7 @@
 ## Login   <giallo_n@epitech.net>
 ## 
 ## Started on  Sun Nov 17 14:49:31 2013 nathan giallombardo
-## Last update Wed Nov 27 23:59:54 2013 Thibault Desplat
+## Last update Thu Nov 28 13:19:14 2013 nathan giallombardo
 ##
 
 RM	= rm -f
@@ -32,7 +32,7 @@ SRCS	= func2.c \
 	  my_str_isdoublon.c \
 	  my_getnbr.c \
 	  my_getnbr_base.c \
-	  my_strupcase.c
+	  my_str_isupcase.c
 
 OBJS	= $(SRCS:.c=.o)
 

@@ -5,17 +5,17 @@
 ## Login   <despla_t@epitech.net>
 ## 
 ## Started on  Wed Nov 27 13:13:36 2013 Thibault Desplat
-## Last update Wed Nov 27 16:52:10 2013 Thibault Desplat
+## Last update Thu Nov 28 12:59:07 2013 nathan giallombardo
 ##
 
 NAME		= 102chiffrement
 
 SRC		= 102chiffrement.c \
-		  102chiffrement2.c
+		  tools.c
 
-CC		= gcc -o
+CC		= cc
 
-CFLAGS		= -I.
+CFLAGS		= -I. -Ilib/
 
 RM		= rm -f
 
@@ -24,7 +24,7 @@ OBJ		= $(SRC:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-		$(CC) $(NAME) $(OBJ) -lmy -L.
+		$(CC) $(OBJ) -Llib/ -lmy -o $(NAME)
 
 clean:
 		$(RM) $(OBJ)
@@ -34,4 +34,3 @@ fclean:		clean
 
 re:		fclean all
 
-.PHONY:	all clean fclean re
