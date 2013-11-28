@@ -5,7 +5,7 @@
 ** Login   <giallo_n@epitech.net>
 **
 ** Started on  Thu Oct 10 23:48:30 2013 nathan giallombardo
-** Last update Thu Nov 28 13:21:19 2013 nathan giallombardo
+** Last update Thu Nov 28 13:45:02 2013 nathan giallombardo
 */
 
 #ifndef MY_H_
@@ -23,5 +23,5 @@ int	my_str_isdoublon(char *str);
 int	my_getnbr_base(char *str, char *base);
 int	my_getnbr(char *str);
 int	my_str_isupcase(char *str);
-
+char	**my_str_to_wordtab(char *str);
 #endif /* !MY_H_ */
